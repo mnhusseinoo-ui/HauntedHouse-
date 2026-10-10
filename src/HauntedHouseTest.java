@@ -4,8 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class HauntedHouseTest {
 
     @org.junit.jupiter.api.Test
-    void ReturningGhost()
-    {
+    void ReturningGhost() {
         HauntedHouse house = new HauntedHouse();
         house.scareAwayGhost();
         house.RetGhost();
@@ -13,8 +12,7 @@ class HauntedHouseTest {
     }
 
     @org.junit.jupiter.api.Test
-    void RunningLow()
-    {
+    void RunningLow() {
         HauntedHouse house = new HauntedHouse();
         {
             house.trickOrTreat(10);
@@ -23,21 +21,18 @@ class HauntedHouseTest {
     }
 
     @org.junit.jupiter.api.Test
-    void NegativeCandy()
-    {
+    void NegativeCandy() {
         HauntedHouse house = new HauntedHouse();
         house.refillCandyBowl(-30);
-        assertEquals(10,house.getCandyCount());
+        assertEquals(10, house.getCandyCount());
     }
 
     @org.junit.jupiter.api.Test
-        void tooManyPeople()
-        {
-            HauntedHouse house = new HauntedHouse();
-            house.trickOrTreat(20);
-            assertEquals(10, house.getCandyCount());
-        }
-
+    void tooManyPeople() {
+        HauntedHouse house = new HauntedHouse();
+        house.trickOrTreat(20);
+        assertEquals(10, house.getCandyCount());
+    }
 
 
     @org.junit.jupiter.api.Test
@@ -57,29 +52,22 @@ class HauntedHouseTest {
     void refillCandyBowl() {
         HauntedHouse house = new HauntedHouse();
         house.trickOrTreat(10);
-house.refillCandyBowl(10);
-assertEquals(20,house.getCandyCount());
+        house.refillCandyBowl(10);
+        assertEquals(20, house.getCandyCount());
     }
 
     @org.junit.jupiter.api.Test
     void trickOrTreat() {
         HauntedHouse house = new HauntedHouse();
-       house.refillCandyBowl(30);
-       house.trickOrTreat(20);
-       assertEquals(20,house.getCandyCount());
-    }
-
-    @org.junit.jupiter.api.Test
-    void getCandyCount() {
+        house.refillCandyBowl(30);
+        house.trickOrTreat(20);
+        assertEquals(20, house.getCandyCount());
     }
 
     @org.junit.jupiter.api.Test
     void spookySound() {
         HauntedHouse house = new HauntedHouse();
-        assertEquals("Boo!",house.spookySound());
+        assertEquals("Boo!", house.spookySound());
     }
 
-    @org.junit.jupiter.api.Test
-    void testToString() {
-    }
 }
